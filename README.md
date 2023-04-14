@@ -1,2 +1,2 @@
-# my-ideavimrc
-My personal config file for the IdeaVim Plugin
+# My IdeaVim Config File
+
