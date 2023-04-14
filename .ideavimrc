@@ -17,9 +17,6 @@ set NERDTree
 " Configure exit insert mode
 inoremap jj <ESC>
 
-" Configure Redo
-nnoremap U :redo<CR>
-
 " Configure motion.
 map <leader>j <Plug>(easymotion-s)
 nnoremap <leader>e :action GotoNextError<CR>
