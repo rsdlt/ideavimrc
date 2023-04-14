@@ -1,0 +1,76 @@
+" My ~/.ideavimrc file configuration.
+
+" Set configuration and functionality.
+let mapleader = " "
+set number relativenumber
+set ignorecase
+set smartcase
+set incsearch
+set highlightedyank
+set surround
+set easymotion
+set notimeout
+set visualbell
+set noerrorbells
+set NERDTree
+
+" Configure exit insert mode
+inoremap jj <ESC>
+
+" Configure Redo
+nnoremap U :redo<CR>
+
+" Configure motion.
+map <leader>j <Plug>(easymotion-s)
+nnoremap <leader>e :action GotoNextError<CR>
+nnoremap <leader>E :action GotoPreviousError<CR>
+nnoremap <leader>i :action GotoImplementation<CR>
+nnoremap <leader>d :action GotToDeclaration<CR>
+
+" Configure Build-Run-Debug shortcuts.
+map <leader>R <action>(Run)
+map <leader>B <action>(Build)
+map <leader>D <action>(Debug)
+map <leader>r <action>(ContextRun)
+map <leader>b <action>(ToggleLineBreakpoint)
+map <leader>d <action>(ContextDebug)
+map <leader>cr <action>(Cargo.RefreshCargoProject)
+nnoremap <leader>w :w<CR>
+
+" Configure Window Tools toggle.
+map ,s <action>(ActivateStructureToolWindow)
+map ,e :NERDTreeToggle<CR>
+map ,r <action>(Refactorings.QuickListPopupAction)
+map ,a <action>(SearchEverywhere)
+map ,u <action>(FindUsages)
+map ,f <action>(GotoFile)
+map ,p <action>(ActivateProblemsViewToolWindow)
+map ,g <action>(ActivateVersionControlToolWindow)
+map ,c <action>(ActivateCommitToolWindow)
+map ,t <action>(ActivateTerminalToolWindow)
+map ,n <action>(Notifications)
+map ,z <action>(ToggleZenMode)
+map ,q <action>(CloseEditor)
+map ,i <action>(ShowErrorDescription)
+map ,h <action>(ToggleInlayHintsGloballyAction)
+map ,D <action>(Activatedocumentation.v2ToolWindow)
+map ,d <action>(QuickJavaDoc)
+map ,F <action>(ToggleFullScreen)
+
+" Configure Comments & Folding
+map cc <action>(CommentByLineComment)
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap ZC :action CollapseAllRegions<CR>
+nnoremap ZO :action ExpandAllRegions<CR>
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+" map ,D <action>(Documentation.Navigation) -- opens Quick Documentation Navigation
