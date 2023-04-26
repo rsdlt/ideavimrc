@@ -24,7 +24,7 @@ map mc <A-n>
 map mx <A-x>
 map mp <A-p>
 
-" Configure Undo
+" Configure Redo
 nnoremap U :red<CR>
 
 " Configure exit insert mode
