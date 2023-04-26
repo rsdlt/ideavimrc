@@ -7,3 +7,5 @@ Includes configuration for:
 - Surround
 - NERDTree
 - IDE Actions
+- Multiple Cursors
+- Undo / Redo
