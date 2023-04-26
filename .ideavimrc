@@ -13,10 +13,20 @@ set notimeout
 set visualbell
 set noerrorbells
 set NERDTree
+Plug 'terryma/vim-multiple-cursors'
 
 " Modify Font size"
 map <leader>y :action EditorIncreaseFontSize<CR>
 map <leader>t :action EditorResetFontSize<CR>
+
+" configure multiple cursors"
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
+
+" Configure Undo
+nnoremap U :red<CR>
+
 " Configure exit insert mode
 inoremap jj <ESC>
 
