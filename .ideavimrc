@@ -15,9 +15,6 @@ set noerrorbells
 set NERDTree
 Plug 'terryma/vim-multiple-cursors'
 
-" Modify Font size"
-map <leader>y :action EditorIncreaseFontSize<CR>
-map <leader>t :action EditorResetFontSize<CR>
 
 " configure multiple cursors"
 map mc <A-n>
@@ -30,12 +27,44 @@ nnoremap U :red<CR>
 " Configure exit insert mode
 inoremap jj <ESC>
 
+" Configure Comments & Folding
+map cc <action>(CommentByLineComment)
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap ZC :action CollapseAllRegions<CR>
+nnoremap ZO :action ExpandAllRegions<CR>
+
+" Configure Full Screen
+map <leader>F <action>(ToggleFullScreen)
+
+" Configure Save
+nnoremap <leader>w :w<CR>
+
 " Configure motion.
 map <leader>j <Plug>(easymotion-s)
 nnoremap <leader>e :action GotoNextError<CR>
 nnoremap <leader>E :action GotoPreviousError<CR>
 nnoremap <leader>i :action GotoImplementation<CR>
 nnoremap <leader>d :action GotToDeclaration<CR>
+
+"Manage splits
+nnoremap <leader>sr :action OpenInRightSplit<CR>
+nnoremap <leader>sn :action NextSplitter<CR>
+nnoremap <leader>sp :action PrevSplitter<CR>
+nnoremap <leader>sh :action SplitHorizontally<CR>
+nnoremap <leader>sv :action SplitVertically<CR>
+nnoremap <leader>sc :action Unsplit<CR>
+nnoremap <leader>sq :action UnsplitAll<CR>
+nnoremap <leader>sm :action MaximizeEditorInSplit<CR>
+nnoremap <A-j> :action StretchSplitToBottom<CR>
+nnoremap <A-h> :action StretchSplitToLeft<CR>
+nnoremap <A-l> :action StretchSplitToRight<CR>
+nnoremap <A-k> :action StretchSplitToTop<CR>
+
+
+" Modify Font size"
+map <leader>y :action EditorIncreaseFontSize<CR>
+map <leader>t :action EditorResetFontSize<CR>
 
 " Configure Build-Run-Debug shortcuts.
 map <leader>R <action>(Run)
@@ -45,7 +74,6 @@ map <leader>r <action>(ContextRun)
 map <leader>b <action>(ToggleLineBreakpoint)
 map <leader>d <action>(ContextDebug)
 map <leader>cr <action>(Cargo.RefreshCargoProject)
-nnoremap <leader>w :w<CR>
 
 " Configure Window Tools toggle.
 map ,F <action>(FindInPath)
@@ -59,21 +87,15 @@ map ,p <action>(ActivateProblemsViewToolWindow)
 map ,g <action>(ActivateVersionControlToolWindow)
 map ,c <action>(ActivateCommitToolWindow)
 map ,t <action>(ActivateTerminalToolWindow)
-map ,n <action>(Notifications)
 map ,z <action>(ToggleZenMode)
 map ,q <action>(CloseEditor)
 map ,i <action>(ShowErrorDescription)
 map ,h <action>(ToggleInlayHintsGloballyAction)
 map ,D <action>(Activatedocumentation.v2ToolWindow)
 map ,d <action>(QuickJavaDoc)
-"map ,F <action>(ToggleFullScreen)
+map ,nf :action NewFile<CR>
+map ,nd :action NewDir<CR>
 
-" Configure Comments & Folding
-map cc <action>(CommentByLineComment)
-nnoremap zc :action CollapseRegion<CR>
-nnoremap zo :action ExpandRegion<CR>
-nnoremap ZC :action CollapseAllRegions<CR>
-nnoremap ZO :action ExpandAllRegions<CR>
 
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
