@@ -13,13 +13,6 @@ set notimeout
 set visualbell
 set noerrorbells
 set NERDTree
-Plug 'terryma/vim-multiple-cursors'
-
-
-" configure multiple cursors"
-map mc <A-n>
-map mx <A-x>
-map mp <A-p>
 
 " Configure Redo
 nnoremap U :red<CR>
@@ -41,11 +34,11 @@ map <leader>F <action>(ToggleFullScreen)
 nnoremap <leader>w :w<CR>
 
 " Configure motion.
-map <leader>j <Plug>(easymotion-s)
-nnoremap <leader>e :action GotoNextError<CR>
-nnoremap <leader>E :action GotoPreviousError<CR>
-nnoremap <leader>i :action GotoImplementation<CR>
-nnoremap <leader>d :action GotToDeclaration<CR>
+map mj <Plug>(easymotion-s)
+nnoremap me :action GotoNextError<CR>
+nnoremap mE :action GotoPreviousError<CR>
+nnoremap mi :action GotoImplementation<CR>
+nnoremap md :action GotToDeclaration<CR>
 
 "Manage splits
 nnoremap <leader>sr :action OpenInRightSplit<CR>
