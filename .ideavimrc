@@ -1,3 +1,5 @@
+" List actions with :actionlist
+
 " My ~/.ideavimrc file configuration.
 
 " Set configuration and functionality.
@@ -13,6 +15,7 @@ set notimeout
 set visualbell
 set noerrorbells
 set NERDTree
+set ideajoin
 
 " Configure Redo
 nnoremap U :red<CR>
